@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIABLES */
+
+:root {
+  --regular-txt: 400;
+}
+
+/* END VARIABLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background: url("Assets/bg.jpg") no-repeat center center/ cover;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  height: 100dvh;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background: rgb(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+  z-index: -1;
+}
+
+.main-container {
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0.15)
+  );
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+/* SEARCH CONTAINER */
+
+.search-input {
+  outline: none;
+  width: 100%;
+  border: 1px solid transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 16px;
+  background: rgb(0, 0, 0, 0.35);
+  transition: all 0.3s;
+}
+
+.search-input::placeholder {
+  color: rgb(255, 255, 255, 0.75);
+}
+
+.search-input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.search-button {
+  position: absolute;
+  right: 16px;
+  display: flex;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.suggestion-search {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-height: 200px; /* limit height */
+  overflow-y: auto;
+  background: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  z-index: 10;
+}
+
+/* scrollbar look */
+.suggestion-search::-webkit-scrollbar {
+  width: 3px;
+}
+.suggestion-search::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+}
+
+.suggestion-result {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.85);
+  list-style: none;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  padding-top: 20px;
+  z-index: 9999;
+  display: none;
+}
+
+/* END SEARCH CONTAINER */
+
+/* SECTION : WEATHER INFO */
+
+.location-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--regular-txt);
+}
+
+.location {
+  display: flex;
+  gap: 5px;
+  font-weight: var(--regular-txt);
+}
+
+.weather-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.weather-summaty-text {
+  font-weight: var(--regular-txt);
+  text-align: end;
+  overflow-x: hidden;
+}
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-condition-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.forecast-items-container {
+  overflow-x: scroll;
+  display: flex;
+  gap: 15px;
+  padding-bottom: 12px;
+}
+.forecast-items-container::-webkit-scrollbar {
+  height: 8px;
+}
+.forecast-items-container::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.1);
+  border-radius: 99px;
+}
+.forecast-items-container::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0, 0.25);
+  border-radius: 99px;
+}
+.forecast-item {
+  min-width: 70px;
+  background: rgb(0, 0, 0, 0.25);
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 12px;
+  flex-direction: column;
+  transition: .3s background ;
+}
+
+.forecast-item:hover{
+  background-color: rgb(0, 0, 0, 0.1);
+}
+.forecast-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* SECTION END : WEATHER INFO */
+
+
+/* SECTION : MESSAGE */
+.search-city,.search-error{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+
+.message-img{
+  width: fit-content;
+  height: 180px;
+}
+
+
+/* END SECTION : MESSAGE */
