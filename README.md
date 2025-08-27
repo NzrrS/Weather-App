@@ -29,4 +29,4 @@
 ---
 
    ```bash
-   [git clone https://github.com/NzrrS/Weather-App.git](https://github.com/NzrrS/Weather-App.git)
+   git clone https://github.com/NzrrS/Weather-App.git
