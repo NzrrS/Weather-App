@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="freeCodeCamp" src="/Weather-app.png">
+  <img alt="Waether app" src="Assets/Weather-app.png">
 </div>
 
 ---
