@@ -6,9 +6,9 @@
 
 # 🌦️ Weather App
 
-A simple weather application built with **HTML, CSS, and JavaScript**.  
-It uses the [OpenWeather API](https://openweathermap.org/api) to fetch real-time weather data.
-And for the cities i used [Getpostman](https://documenter.getpostman.com/view/1134062/T1LJjU52) to fetch countries and cities.
+- A simple weather application built with **HTML, CSS, and JavaScript**.  
+- It uses the [OpenWeather API](https://openweathermap.org/api) to fetch real-time weather data.
+- And for the cities i used [Getpostman](https://documenter.getpostman.com/view/1134062/T1LJjU52) to fetch countries and cities.
 
 ---
 
