@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* VARIABLES + IMPORT FONT POOPINS FROM GOOGLE FONTS */
 
-/* VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --regular-txt: 400;
 }
 
 /* END VARIABLES */
+
+
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -47,6 +50,8 @@ body::before {
   backdrop-filter: blur(5px);
   padding: 20px;
 }
+
+
 
 /* SEARCH CONTAINER */
 
@@ -129,6 +134,8 @@ body::before {
 
 /* END SEARCH CONTAINER */
 
+
+
 /* SECTION : WEATHER INFO */
 
 .location-date-container {
@@ -177,11 +184,11 @@ body::before {
   height: 8px;
 }
 .forecast-items-container::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0, 0.1);
+  background: rgb(255,255,255,0.1);
   border-radius: 99px;
 }
 .forecast-items-container::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0, 0.25);
+  background: rgb(0, 0, 0, 0.35);
   border-radius: 99px;
 }
 .forecast-item {
@@ -207,7 +214,9 @@ body::before {
 /* SECTION END : WEATHER INFO */
 
 
+
 /* SECTION : MESSAGE */
+
 .search-city,.search-error{
   display: flex;
   flex-direction: column;
@@ -221,6 +230,5 @@ body::before {
   width: fit-content;
   height: 180px;
 }
-
 
 /* END SECTION : MESSAGE */
