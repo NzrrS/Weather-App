@@ -138,7 +138,7 @@ searchInput.addEventListener("keydown", (e) => {
 // Fetch current weather
 
 async function fetchWeather(city) {
-  return fetch(
+  return fetchData(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     );
 }
