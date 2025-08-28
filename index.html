@@ -32,16 +32,15 @@
       <!-- END SEARCH CONTAINER -->
 
       <!-- WEATHER INFO -->
-      <section class="weather-info" >
-
+      <section class="weather-info" id="weatherInfo" style="display: none">
         <!-- location and time  -->
 
         <div class="location-date-container">
           <div class="location">
             <span class="material-symbols-outlined"> location_on </span>
-            <h3 class="loction-name" id="locationName">khouribga</h3>
+            <h3 class="loction-name" id="locationName"></h3>
           </div>
-          <span class="date">12 Aug 2002</span>
+          <span class="date" id="cityDate"></span>
         </div>
 
         <!-- END location and time  -->
@@ -49,15 +48,10 @@
         <!-- img and temp -->
 
         <div class="weather-summary-container">
-          <img
-            src="Assets/weather/clouds.svg"
-            alt="weather img"
-            class="weather-icon"
-            id="weatherIcon"
-          />
+          <img src="" alt="weather img" class="weather-icon" id="weatherIcon" />
           <div class="weather-summaty-text">
-            <h1 class="weather-temp" id="weatherTemp">23°C</h1>
-            <h3 class="weather-status" id="weatherStatus">Clouds</h3>
+            <h1 class="weather-temp" id="weatherTemp"></h1>
+            <h3 class="weather-status" id="weatherStatus"></h3>
           </div>
         </div>
 
@@ -65,84 +59,57 @@
 
         <!-- weather condition -->
         <div class="weather-condition-container">
-
           <div class="condition-item">
-
             <span class="material-symbols-outlined"> water_drop </span>
-             <div class="condition-item">
+            <div class="condition-item">
               <h5>Humidity</h5>
-              <h5 id="humidity">12%</h5>
-             </div>
-            
+              <h5 id="humidity"></h5>
+            </div>
           </div>
-           <div class="condition-item">
-            
+          <div class="condition-item">
             <span class="material-symbols-outlined"> air </span>
-             <div class="condition-item">
+            <div class="condition-item">
               <h5>Wind speed</h5>
-              <h5 id="windSpeed">1 M/s</h5>
-             </div>
-            
+              <h5 id="windSpeed"></h5>
+            </div>
           </div>
         </div>
 
         <!--END weather condition -->
 
-
         <!-- Forecast -->
-         <div class="forecast-items-container">
-          <div class="forecast-item">
-            <h6 id="day">Aug 10</h6>
-            <img src="Assets/weather/clear.svg" alt="day icon" class="forecast-icon">
-            <h5 id="dayTemp">23°C</h5>
-          </div>
-          <div class="forecast-item">
-            <h6 id="day">Aug 10</h6>
-            <img src="Assets/weather/clear.svg" alt="day icon" class="forecast-icon">
-            <h5 id="dayTemp">23°C</h5>
-          </div>
-          <div class="forecast-item">
-            <h6 id="day">Aug 10</h6>
-            <img src="Assets/weather/clear.svg" alt="day icon" class="forecast-icon">
-            <h5 id="dayTemp">23°C</h5>
-          </div>
-          <div class="forecast-item">
-            <h6 id="day">Aug 10</h6>
-            <img src="Assets/weather/clear.svg" alt="day icon" class="forecast-icon">
-            <h5 id="dayTemp">23°C</h5>
-          </div>
-          <div class="forecast-item">
-            <h6 id="day">Aug 10</h6>
-            <img src="Assets/weather/clear.svg" alt="day icon" class="forecast-icon">
-            <h5 id="dayTemp">23°C</h5>
-          </div>
-         </div>
+        <div class="forecast-items-container"></div>
         <!-- END Forecast -->
-
       </section>
       <!-- END WEATHER INFO -->
 
       <!-- MESSAGE SEARCH -->
-      <section class="search-city" style="display: none;">
-        <img src="Assets/message/search-city.png" alt="search city" class="message-img">
+      <section class="search-city" id="searchMessage" style="display: block">
+        <img
+          src="Assets/message/search-city.png"
+          alt="search city"
+          class="message-img"
+        />
         <div>
           <h1>Search City</h1>
-          <h4 style="font-weight: 400;">Find out the weather conditions of the city</h4>
+          <h4 style="font-weight: 400">
+            Find out the weather conditions of the city
+          </h4>
         </div>
       </section>
       <!-- END MESSAGE SEARCH -->
 
       <!-- MESSAGE ERROR -->
-       <section class="search-error" style="display: none;">
-        <img src="Assets/message/not-found.png" alt="" class="message-img">
+      <section class="search-error" id="searchError" style="display: none">
+        <img src="Assets/message/not-found.png" alt="" class="message-img" />
         <div>
           <h1>City Not Found</h1>
-          <h4 style="font-weight: 400;">Please check the spelling or try searching for another city.</h4>
+          <h4 style="font-weight: 400">
+            Please check the spelling or try searching for another city.
+          </h4>
         </div>
-       </section>
+      </section>
       <!-- END MESSAGE ERROR -->
-
-
     </div>
     <script src="script.js"></script>
   </body>

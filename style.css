@@ -157,8 +157,8 @@ body::before {
   overflow-x: hidden;
 }
 .weather-icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 90px;
 }
 
 .weather-condition-container {
