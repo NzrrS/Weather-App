@@ -123,7 +123,7 @@ function displayForecast(forecastData) {
       div.className = "forecast-item";
       div.innerHTML = `
         <h6>${dayStr}</h6>
-        <img src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" class="forecast-icon">
+        <img src="Assets/icons/${item.weather[0].icon}.png" class="forecast-icon">
         <h5>${Math.round(item.main.temp)}°C</h5>
       `;
       forecastContainer.appendChild(div);
@@ -140,10 +140,12 @@ function displayWeather(data, forecastData) {
     return;
   }
 
+
+
   cityLocation.textContent = data.name;
   const date = new Date(data.dt * 1000);
   cityDate.textContent = date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
-  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  weatherIcon.src = `Assets/icons/${data.weather[0].icon}.png`;
   weatherTemp.textContent = `${Math.round(data.main.temp)}°C`;
   weatherStatus.textContent = data.weather[0].main;
   humidity.textContent = `${data.main.humidity}%`;
