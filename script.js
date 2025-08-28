@@ -121,7 +121,7 @@ searchInput.addEventListener("keydown", (e) => {
       searchInput.value = items[0].textContent;
       suggestionSearch.innerHTML = "";
       searchButton.click()
-    }
+    } searchButton.click()
   }
 });
 
@@ -242,6 +242,8 @@ searchButton.addEventListener("click", async () => {
   const forecastData = await fetchForecast(city);
   displayWeather(data, forecastData);
 });
+
+
 
 // ------------------------
 // END SEARCH BUTTON CLICK
